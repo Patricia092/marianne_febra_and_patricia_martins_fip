@@ -3,15 +3,235 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <title>FIP</title>
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0eab0f8aa6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/ram5qzb.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt&display=swap" rel="stylesheet">
+    <title>Zima</title>
 </head>
 
 <body>
-    <h1>Home</h1>
-    <script src="js/main.js"></script>
+    <h1 class="hidden">Zima</h1>
+    <header>
+        <div class="grid-con">
+            <h2 class="hidden">Header</h2>
+            <div class="col-start-1 col-end-3 m-col-start-1 m-col-end-3 l-col-span-2 xl-col-span-2">
+                <a href="index.html">
+                    <img src="images/zima-wordmark.svg" alt="ZIMA logo" width="100" height="70">
+                </a>
+            </div>
+            <article class="col-start-4 col-end-4 m-col-start-11 m-col-end-13 l-col-span-10 xl-col-span-10 desktop">
+                <h3 class="hidden">Header Navbar Desktop</h3>
+                <nav class="flex-container-header desktop">
+                    <h4 class="hidden">Header Navigation Desktop</h4>
+                    <ul class="ul-nav li-animation">
+                        <li class="flexbox-header desktop itens"><a href="index.html">Home</a></li>
+                        <li class="flexbox-header desktop itens"><a href="#">About Us</a></li>
+                        <li class="flexbox-header desktop itens"><a href="products.html">Products</a></li>
+                        <li class="flexbox-header desktop itens"><a href="#">Recipes</a></li>
+                    </ul>
+                    <ul class="icons">
+                        <li><a href="#"><i class="fa-solid fa-magnifying-glass icons-space"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-user icons-space"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-cart-shopping icons-space"></i></a></li>
+                    </ul>
+                </nav>
+            </article>
+            <article
+                class="col-start-4 col-end-4 m-col-start-3 m-col-end-12 l-col-span-10 xl-col-span-10 nav-bar-tablet tablet">
+                <h3 class="hidden">Header Navbar Tablet</h3>
+                <nav class="flex-container-header tablet">
+                    <h4 class="hidden">Header Navigation Tablet</h4>
+                    <ul class="ul-nav-tablet li-animation-tablet">
+                        <li class="flexbox-header tablet itens"><a href="index.html">Home</a></li>
+                        <li class="flexbox-header tablet itens"><a href="#">About Us</a></li>
+                        <li class="flexbox-header tablet itens"><a href="products.html">Products</a></li>
+                        <li class="flexbox-header tablet itens"><a href="#">Recipes</a></li>
+                    </ul>
+                    <ul class="icons-tablet">
+                        <li><a href="#"><i class="fa-solid fa-magnifying-glass icons-space"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-user icons-space"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-cart-shopping icons-space"></i></a></li>
+                    </ul>
+                </nav>
+            </article>
+            <!-- Mobile Menu -->
+            <div class="mobile">
+                <input type="checkbox" id="overlay-input">
+                <label for="overlay-input" id="overlay-button"><span></span></label>
+                <div id="overlay">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="#">Recipes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h2 class="hidden">Hero Image</h2>
+            <div class="hero-img">
+                <picture>
+                    <source media="(min-width:1200px)" srcset="images/desk_hero_home.png">
+                    <source media="(min-width:768px)" srcset="images/tab_hero_home.png">
+                    <source media="(min-width:900px)" srcset="images/space_hero_home.png">
+                    <source media="(min-width:510px)" srcset="images/mob_hero_home.png">
+                    <img src="images/mob_hero_home.png" alt="Hero image">
+                </picture>
+            </div>
+
+        </section>
+
+        <section class="hero">
+            <h2 class="blue-title">Featured Flavors</h2>
+            <div class="hero-img">
+                <picture>
+                    <source media="(min-width:1200px)" srcset="images/des-home-feat.png">
+                    <source media="(min-width:768px)" srcset="images/tab-home-feat.png">
+                    <source media="(min-width:900px)" srcset="images/des-spacer-home-feat.png">
+                    <source media="(min-width:510px)" srcset="images/mob-home-feat.png">
+                    <img src="images/mob-home-feat.png" alt="Featured Flavors">
+                </picture>
+            </div>
+        </section>
+
+        <section class="hero">
+            <h2 class="video-title">Trending ZIMA Drinks</h2>
+            <div class="hero-img">
+                <picture>
+                    <source media="(min-width:1200px)" srcset="images/desk_video.png">
+                    <source media="(min-width:768px)" srcset="images/tab_video.png">
+                    <source media="(min-width:900px)" srcset="images/space_video.png">
+                    <source media="(min-width:510px)" srcset="images/mob_video.png">
+                    <img src="images/mob_video.png" alt="Trending ZIMA Drinks">
+                </picture>
+            </div>
+
+        </section>
+
+        <section class="hero about-us">
+            <h2 class="hidden">About us Section</h2>
+            <div class="hero-img">
+                <picture>
+                    <source media="(min-width:1200px)" srcset="images/desk_about_us.png">
+                    <source media="(min-width:768px)" srcset="images/tab_about_us.png">
+                    <source media="(min-width:900px)" srcset="images/space_about_us.png">
+                    <source media="(min-width:510px)" srcset="images/mob_about_us.png">
+                    <img src="images/mob_about_us.png" alt="About us Section">
+                </picture>
+            </div>
+        </section>
+        <section class="grid-con" id="contact-form">
+            <h2 class="hidden">Contact Form Section</h2>
+            <div class="col-span-4 m-col-span-12 l-col-span-6 xl-col-span-6">
+                <section id="contact-text" class="contact-text-style">
+                    <h3 class="blue-title">We'd Love to Hear From You!</h3>
+                    <p>Please, contact us if you have any questions, comments, or concerns... </p>
+                </section>
+            </div>
+            <div class="col-span-4 m-col-start-3 m-col-end-11 l-col-span-6 xl-col-span-6">
+                <section id="contact-us" class="contact-us-style">
+                    <h3 class="hidden">Contact Us Form</h3>
+                    <form method="POST">
+                        <label for="fname">Name*</label>
+                        <input name="fullName" type="text" id="fname" placeholder="Your full name">
+                        <label for="email">Email*</label>
+                        <input name="email" type="email" id="email" required placeholder="Your Email address">
+                        <label for="phone">Phone*</label>
+                        <input name="phone" id="phone" type="text" required placeholder="Your phone number">
+                        <label for="comment">Comment*</label>
+                        <textarea name="msg" id="comment" placeholder="Your Comment"></textarea>
+                        <input name="submit" type="submit" value="SUBMIT">
+                    </form>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="grid-con">
+            <h2 class="hidden">Footer</h2>
+            <div class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 footer-font">
+                <div class="flex-container-footer-mobile">
+                    <div class="flexbox-footer-mobile mobile">
+                        <p>Facilisis<br>
+                            Magna<br>
+                            Etiam <br>
+                            tempor<br>
+                            orci
+                        </p>
+                    </div>
+                </div>
+                <div class="flex-container-footer-m-l-xl">
+                    <div class="flexbox-footer-m-l-xl tablet"><img src="images/zima-wordmark.svg" alt="ZIMA logo"
+                            width="150" height="80"></div>
+                    <div class="flexbox-footer-m-l-xl tablet">
+                        <p>Facilisis<br>
+                            Magna<br>
+                            Etiam <br>
+                            tempor<br>
+                            orci
+                        </p>
+                    </div>
+                    <div class="flexbox-footer-m-l-xl tablet">
+                        <p>
+                            Sed ut<br>
+                            perspiciatis<br>
+                            unde omnis<br>
+                            iste natus<br>
+                            error
+                        </p>
+                    </div>
+                    <div class="flexbox-footer-m-l-xl tablet">
+                        <p>
+                            Consectetur<br>
+                            Adipiscing elit<br>
+                            Nam in<br>
+                            Augue eget<br>
+                            Turpis dapibus
+                        </p>
+                    </div>
+                </div>
+                <div class="flex-container-footer-m-l-xl">
+                    <div class="flexbox-footer-m-l-xl desktop"><img src="images/zima-wordmark.svg" alt="ZIMA logo"
+                            width="200" height="80"></div>
+                    <div class="flexbox-footer-m-l-xl desktop">
+                        <p>Facilisis<br>
+                            Magna<br>
+                            Etiam <br>
+                            tempor<br>
+                            orci
+                        </p>
+                    </div>
+                    <div class="flexbox-footer-m-l-xl desktop">
+                        <p>
+                            Sed ut<br>
+                            perspiciatis<br>
+                            unde omnis<br>
+                            iste natus<br>
+                            error
+                        </p>
+                    </div>
+                    <div class="flexbox-footer-m-l-xl desktop">
+                        <p>
+                            Consectetur<br>
+                            Adipiscing elit<br>
+                            Nam in<br>
+                            Augue eget<br>
+                            Turpis dapibus
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="copyright"> ZIMA &copy; - 2023 All Rights Reserved.</p>
+    </footer>
 </body>
 
 </html>
