@@ -30,7 +30,7 @@
                     <h4 class="hidden">Header Navigation Desktop</h4>
                     <ul class="ul-nav li-animation">
                         <li class="flexbox-header desktop itens"><a href="index.html">Home</a></li>
-                        <li class="flexbox-header desktop itens"><a href="#">About Us</a></li>
+                        <li class="flexbox-header desktop itens"><a href="aboutus.html">About Us</a></li>
                         <li class="flexbox-header desktop itens"><a href="products.html">Products</a></li>
                         <li class="flexbox-header desktop itens"><a href="#">Recipes</a></li>
                     </ul>
@@ -75,10 +75,11 @@
         </div>
     </header>
     <main>
-        <section class="hero">
-            <div class="hero-img">
+        <section class="hero slideshow-container">
+            <div class="hero-img mySlides fade">
                 <h2 class="hidden">Hero Image</h2>
-                <picture>
+                <div class="numbertext">1 / 3</div>
+                <picture class="pic">
                     <source media="(min-width:1200px)" srcset="images/desk_hero_products.png">
                     <source media="(min-width:768px)" srcset="images/tab_hero_products.png">
                     <source media="(min-width:900px)" srcset="images/space_hero_products.png">
@@ -86,7 +87,36 @@
                     <img src="images/mob_hero_products.png" alt="Hero Image">
                 </picture>
             </div>
+            <div class="hero-img mySlides fade">
+                <h2 class="hidden">Hero Image</h2>
+                <div class="numbertext">2 / 3</div>
+                <picture class="pic">
+                    <source media="(min-width:1200px)" srcset="images/desk_hero_products.png">
+                    <source media="(min-width:768px)" srcset="images/tab_hero_products.png">
+                    <source media="(min-width:900px)" srcset="images/space_hero_products.png">
+                    <source media="(min-width:510px)" srcset="images/mob_hero_products.png">
+                    <img src="images/mob_hero_products.png" alt="Hero Image">
+                </picture>
+            </div>
+            <div class="hero-img mySlides fade">
+                <h2 class="hidden">Hero Image</h2>
+                <div class="numbertext">3 / 3</div>
+                <picture class="pic">
+                    <source media="(min-width:1200px)" srcset="images/desk_hero_products.png">
+                    <source media="(min-width:768px)" srcset="images/tab_hero_products.png">
+                    <source media="(min-width:900px)" srcset="images/space_hero_products.png">
+                    <source media="(min-width:510px)" srcset="images/mob_hero_products.png">
+                    <img src="images/mob_hero_products.png" alt="Hero Image">
+                </picture>
+            </div>
+
         </section>
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
         <div class="hero-img text-cont">
             <h2 class="hidden">Variety Section</h2>
             <picture>
@@ -217,6 +247,7 @@
         </div>
         <p class="copyright"> ZIMA &copy; - 2023 All Rights Reserved.</p>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
