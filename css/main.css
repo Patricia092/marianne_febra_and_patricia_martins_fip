@@ -176,90 +176,90 @@ footer {
 }
 
 .header-nav {
-	text-align: center;
+    text-align: center;
 }
 
 .ul-nav {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
     margin-top: 20px;
-    
+
 }
 
 .ul-nav-tablet {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
     margin-top: 5px;
     padding: 0;
-    
+
 }
 
 a i {
-	transition: all 0.3s linear;
+    transition: all 0.3s linear;
 }
 
 a:hover i {
-	transform: scale(1);
-	color: #c5b065;
+    transform: scale(1);
+    color: #c5b065;
 }
 
 .ul-nav a {
-	text-decoration: none;
-	font-size: 18px;
+    text-decoration: none;
+    font-size: 18px;
 }
 
 .li-animation li {
-	display: inline-block;
-	position: relative;
-	color: #E3DDCF;
+    display: inline-block;
+    position: relative;
+    color: #E3DDCF;
     margin-right: 40px;
 }
 
 .li-animation li::after {
-	content: '';
-	position: absolute;
-	width: 100%;
-	transform: scaleX(0);
-	height: 3px;
-	bottom: 0;
-	left: 0;
-	background-color: #c5b065;
-	transform-origin: bottom right;
-	transition: transform 0.25s ease-out;
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #c5b065;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
 }
 
 .li-animation li:hover::after {
-	transform: scaleX(1);
-	transform-origin: bottom left;
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .li-animation-tablet li {
-	display: inline-block;
-	position: relative;
-	color: #E3DDCF;
+    display: inline-block;
+    position: relative;
+    color: #E3DDCF;
     margin: 0;
 }
 
 .li-animation-tablet li::after {
-	content: '';
-	position: absolute;
-	width: 100%;
-	transform: scaleX(0);
-	height: 3px;
-	bottom: 0;
-	left: 0;
-	background-color: #c5b065;
-	transform-origin: bottom right;
-	transition: transform 0.25s ease-out;
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #c5b065;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
 }
 
 .li-animation-tablet li:hover::after {
-	transform: scaleX(1);
-	transform-origin: bottom left;
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 
@@ -420,54 +420,66 @@ input[type=checkbox]:checked~#overlay-button span:after {
     grid-row: 1;
 }
 
-.mySlides {display: none;}
-.pic {vertical-align: middle;}
+.mySlides {
+    display: none;
+}
+
+.pic {
+    vertical-align: middle;
+}
 
 /* Slideshow container Products Page*/
 .slideshow-container {
-  max-width: 2500px;
-  position: relative;
-  margin: auto;
+    max-width: 2500px;
+    position: relative;
+    margin: auto;
 }
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
 }
 
 /* The dots/bullets/indicators */
 .dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
 
 .active {
-  background-color: #717171;
+    background-color: #717171;
 }
 
 /* Fading animation */
 .fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+    .text {
+        font-size: 11px
+    }
 }
 
 
@@ -547,3 +559,30 @@ textarea {
 }
 
 
+/* Styles for the modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* Style to hide the input spinner on Firefox */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
