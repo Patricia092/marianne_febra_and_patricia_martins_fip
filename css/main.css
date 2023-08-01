@@ -47,7 +47,9 @@ ul {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5 {
     font-family: 'Melodrama', serif;
 }
 
@@ -480,6 +482,169 @@ input[type=checkbox]:checked~#overlay-button span:after {
     }
 }
 
+/* card slider */
+
+.wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.wrapper .icon {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+
+.wrapper .icon:active {
+    transform: translateY(-50%) scale(0.85);
+}
+
+.wrapper .icon:first-child {
+    left: -22px;
+}
+
+.wrapper .icon:last-child {
+    right: -22px;
+}
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card-shop {
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel :where(.img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .card-shop {
+    scroll-snap-align: start;
+    list-style: none;
+    background: #fff;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+}
+
+
+.card-shop .img img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 4px solid #fff;
+}
+
+.carousel .card-shop h2 {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 20px 0 20px 0;
+}
+
+.carousel .card-shop span {
+    color: #6A6D78;
+    font-size: 1.31rem;
+}
+
+.card-shop .buttons-shop {
+    margin: 20px 10% 0 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-add {
+    background-color: #0A284B;
+    border: none;
+    font-size: 14px;
+    color: white;
+    padding: 11px 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.btn-plus i {
+    color: #0A284B;
+    font-size: 32px;
+    padding: 2px 10px;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+/* popover */
+
+/* Style for the popover */
+.popover-container {
+    position: relative;
+    z-index: 2;
+    padding: auto;
+}
+
+.popover {
+    position: absolute;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 3;
+    display: none;
+}
+
+/* Show the popover when hovering over the .btn-plus */
+.popover-container:hover .popover {
+    display: block;
+}
+
+/* Additional styling for the popover content */
+.popover-content {
+    font-size: 14px;
+    color: #333;
+    padding: 10px;
+}
+
 
 /* ---End of Hero Image--- */
 
@@ -644,167 +809,4 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
-}
-
-/* card slider */
-
-.wrapper {
-    width: 100%;
-    position: relative;
-}
-
-.wrapper .icon {
-    top: 50%;
-    height: 50px;
-    width: 50px;
-    cursor: pointer;
-    font-size: 1.25rem;
-    position: absolute;
-    text-align: center;
-    line-height: 50px;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
-    transform: translateY(-50%);
-    transition: transform 0.1s linear;
-}
-
-.wrapper .icon:active {
-    transform: translateY(-50%) scale(0.85);
-}
-
-.wrapper .icon:first-child {
-    left: -22px;
-}
-
-.wrapper .icon:last-child {
-    right: -22px;
-}
-
-.wrapper .carousel {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 3) - 12px);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 16px;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-}
-
-.carousel::-webkit-scrollbar {
-    display: none;
-}
-
-.carousel.no-transition {
-    scroll-behavior: auto;
-}
-
-.carousel.dragging {
-    scroll-snap-type: none;
-    scroll-behavior: auto;
-}
-
-.carousel.dragging .card-shop {
-    cursor: grab;
-    user-select: none;
-}
-
-.carousel :where(.img) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.carousel .card-shop {
-    scroll-snap-align: start;
-    list-style: none;
-    background: #fff;
-    cursor: pointer;
-    padding-bottom: 15px;
-    flex-direction: column;
-}
-
-
-.card-shop .img img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border: 4px solid #fff;
-}
-
-.carousel .card-shop h2 {
-    display: flex;
-    justify-content: center;
-    font-weight: 500;
-    font-size: 1.56rem;
-    margin: 20px 0 20px 0;
-}
-
-.carousel .card-shop span {
-    color: #6A6D78;
-    font-size: 1.31rem;
-}
-
-.card-shop .buttons-shop {
-    margin: 20px 10% 0 10%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.btn-add {
-    background-color: #0A284B;
-    border: none;
-    font-size: 14px;
-    color: white;
-    padding: 11px 30px;
-    text-align: center;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
-.btn-plus i {
-    color: #0A284B;
-    font-size: 32px;
-    padding: 2px 10px;
-    text-align: center;
-    text-decoration: none;
-    margin: 4px 2px;
-    border-radius: 0px;
-    cursor: pointer;
-}
-
-/* popover */
-
-/* Style for the popover */
-.popover-container {
-    position: relative;
-    z-index: 2;
-    padding: auto;
-}
-
-.popover {
-    position: absolute;
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    z-index: 3;
-    display: none;
-}
-
-/* Show the popover when hovering over the .btn-plus */
-.popover-container:hover .popover {
-    display: block;
-}
-
-/* Additional styling for the popover content */
-.popover-content {
-    font-size: 14px;
-    color: #333;
-    padding: 10px;
 }
