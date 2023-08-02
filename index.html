@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <link rel="icon" href="./images/favicon.ico">
     <script src="https://kit.fontawesome.com/0eab0f8aa6.js" crossorigin="anonymous"></script>
     <link href="https://api.fontshare.com/v2/css?f=melodrama@500&f=ranade@700,701,100,101,500&display=swap"
         rel="stylesheet">
@@ -91,18 +92,81 @@
 
         </section>
 
-        <section class="hero">
-            <h2 class="blue-title">Featured Flavors</h2>
-            <div class="hero-img">
-                <picture>
-                    <source media="(min-width:1200px)" srcset="images/des-home-feat.png">
-                    <source media="(min-width:768px)" srcset="images/tab-home-feat.png">
-                    <source media="(min-width:900px)" srcset="images/des-spacer-home-feat.png">
-                    <source media="(min-width:510px)" srcset="images/mob-home-feat.png">
-                    <img src="images/mob-home-feat.png" alt="Featured Flavors">
-                </picture>
+        <section class="grid-con">
+            <div class="col-span-4 m-col-span-12 l-col-span-13 xl-col-span-13 wrapper">
+                <div class="zima-title zima-title-1">
+                    <span>Zima Zomething Elegant</span>
+                    <span>Zima Zomething Elegant</span>
+                    <span>Zima Zomething Elegant</span>
+                    <span>Zima Zomething Elegant</span>
+                    <span>Zima Zomething Elegant</span>
+                    <span>Zima Zomething Elegant</span>
+                </div>
+                <div class="zima-title zima-title-2">
+                    <span>Zima Zomething Elegant</span>
+                    <span>Zima Zomething Elegant</span>
+                    <span>Zima Zomething Elegant</span>
+                    <span>Zima Zomething Elegant</span>
+                    <span>Zima Zomething Elegant</span>
+                    <span>Zima Zomething Elegant</span>
+                </div>
+                <i id="left" class="fa-solid fa-angle-left icon"></i>
+                <ul class="carousel">
+                    <li class="card-shop-main">
+                        <div class="card-cont">
+                            <div class="img"><img src="images/blue-gin.png" alt="img" draggable="false"></div>
+                            <div class="text-shop">
+                                <h2>Rose Garden Soirée</h2>
+                                <p>Join a luxurious garden soirée with rose-infused cider, a graceful blend that
+                                    elevates your sipping experience.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card-shop-main">
+                        <div class="card-cont">
+                            <div class="img"><img src="images/orange-gin.png" alt="img" draggable="false"></div>
+                            <div class="text-shop">
+                                <h2>Strawberry Odyssey</h2>
+                                <p>Indulge in the romantic vibrance of ripe strawberries, a sweet and succulent
+                                    temptation that enchants your palate.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card-shop-main">
+                        <div class="card-cont">
+                            <div class="img"><img src="images/blue-gin.png" alt="img" draggable="false"></div>
+                            <div class="text-shop">
+                                <h2>Pineapple Sunset</h2>
+                                <p>Witness the radiant glow of a pineapple sunset, a taste that brings warmth and
+                                    serenity to your palate.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card-shop-main">
+                        <div class="card-cont">
+                            <div class="img"><img src="images/blue-gin.png" alt="img" draggable="false"></div>
+                            <div class="text-shop">
+                                <h2>Tropical Kiwi Ecstasy</h2>
+                                <p>Let the juicy sweetness of ripe kiwis whisk you away to sun-kissed beaches, while
+                                    exotic tropical fruits add a touch of ecstasy to every sip. </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card-shop-main">
+                        <div class="card-cont">
+                            <div class="img"><img src="images/blue-gin.png" alt="img" draggable="false"></div>
+                            <div class="text-shop">
+                                <h2>Mystic Blackberry Twilight</h2>
+                                <p>: Succulent blackberries intertwine with whispers of mystery, creating a delightful
+                                    symphony of sweet and tart notes. </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <i id="right" class="fa-solid fa-angle-right icon"></i>
             </div>
         </section>
+
 
         <section class="hero">
             <h2 class="video-title">Trending ZIMA Drinks</h2>
@@ -214,13 +278,15 @@
                             </ul>
                         </nav>
                     </div>
-                
+
                 </div>
                 <section class="grid-con">
                     <h2 class="hidden">Footer newsletter</h2>
-                    <article id="sign-up" class="col-span-4 m-col-start-1 m-col-end-9 l-col-start-1 l-col-end-9 xl-col-start-1 xl-col-end-9 ">
+                    <article id="sign-up"
+                        class="col-span-4 m-col-start-1 m-col-end-9 l-col-start-1 l-col-end-9 xl-col-start-1 xl-col-end-9 ">
                         <h2 class="hidden">newsletter form</h2>
-                        <p id="title-footer" class="title-footer-style">Sign up for our newsletter to receive especial offers.
+                        <p id="title-footer" class="title-footer-style">Sign up for our newsletter to receive especial
+                            offers.
                         </p>
                         <form name="contact form" method="post" action="#" class="form-style">
                             <input type="email" id="signup" name="signup" placeholder="Your Email address"><br>
@@ -237,7 +303,7 @@
         <div class="modal-content">
             <h2>Age Verification</h2>
             <p>Please enter your year of birth to access the website:</p>
-            <input type="number" id="birthYear" placeholder="YYYY" min="1900" max="2100" >
+            <input type="number" id="birthYear" placeholder="YYYY" min="1900" max="2100">
             <button onclick="checkAge()">Check Age</button>
         </div>
     </div>
