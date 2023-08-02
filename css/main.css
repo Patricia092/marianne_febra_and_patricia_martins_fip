@@ -111,7 +111,7 @@ section p {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
 .flexbox-footer-m-l-xl {
@@ -452,7 +452,7 @@ input[type=checkbox]:checked~#overlay-button span:after {
 }
 
 .dots {
-    text-align:center;
+    text-align: center;
 }
 
 .active {
@@ -731,56 +731,56 @@ footer {
 }
 
 #sign-up input {
-	width: 72%;
-	padding: 12px 20px;
-	margin: 8px 0;
-	display: inline-block;
-	background-color: #EFEFEF;
-	border-radius: 4px;
-	box-sizing: border-box;
+    width: 72%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    background-color: #EFEFEF;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 #sign-up input[type=submit] {
-	width: 25%;
-	background-color: #E3DDCF;
-	color: #0A284B;
-	padding: 14px 20px;
-	margin: 8px 0;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
+    width: 25%;
+    background-color: #E3DDCF;
+    color: #0A284B;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 #sign-up input[type=submit]:hover {
-	background-color: #c7a379;
+    background-color: #c7a379;
 }
 
 .form-style {
-	display: flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .title-footer-style {
-	margin-bottom: 10px;
-	color: white;
-	font-size: 22px;
-	font-weight: lighter;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 22px;
+    font-weight: lighter;
 }
 
 .nav-list-style ul li {
-	list-style-type: none;
+    list-style-type: none;
 }
 
 .nav-list-style ul li a {
-	text-decoration: none;
-	font-size: 18px;
-	color: white;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
 }
 
 .nav-list-a:hover {
-	transform: scale(1);
-	color: #c4a47e;
+    transform: scale(1);
+    color: #c4a47e;
 }
 
 /* Styles for the modal */
@@ -809,4 +809,157 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+/* card slider index */
+
+.wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.wrapper .icon {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #E3DDCF;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+
+.wrapper .icon:active {
+    transform: translateY(-50%) scale(0.85);
+}
+
+.wrapper .icon:first-child {
+    left: -22px;
+}
+
+.wrapper .icon:last-child {
+    right: -22px;
+}
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card-shop-main {
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel :where(.img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .card-shop-main {
+    scroll-snap-align: start;
+    list-style: none;
+    background: #E3DDCF;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+}
+
+
+.card-shop-main .img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.card-shop-main .img img {
+    width: 200px;
+    height: 350px;
+    margin-right: 10px;
+    z-index: 2;
+}
+
+.card-shop-main h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.card-shop-main p {
+    font-size: 12px;
+}
+
+.text-shop {
+    width: 200px;
+    margin-top: 200px;
+}
+
+.card-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.zima-title {
+    color: #3d558c4a;
+    position: absolute;
+    width: 100%;
+    font-size: 3vw;
+    line-height: 1;
+    z-index: 1;
+    text-transform: uppercase;
+    transform: translate(0);
+    white-space: nowrap;
+}
+
+.zima-title-1 {
+    top: 6vw;
+    animation: zima 20s linear infinite running;
+}
+
+@keyframes zima {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: 200px;
+    }
+}
+
+.zima-title-2 {
+    top: 9vw;
+    animation: zima2 20s linear infinite running;
+}
+
+@keyframes zima2 {
+    from {
+        right: 0px;
+    }
+
+    to {
+        right: 200px;
+    }
 }
