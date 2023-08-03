@@ -294,10 +294,11 @@
     <!-- Modal -->
     <div id="ageModal" class="modal">
         <div class="modal-content">
-            <h2>Age Verification</h2>
-            <p>Please enter your year of birth to access the website:</p>
-            <input type="number" id="birthYear" placeholder="YYYY" min="1900" max="2100">
-            <button onclick="checkAge()">Check Age</button>
+            <h2>Welcome</h2>
+            <p>You must be 21 years of age to enter this site.</p>
+            <p>Please enter your year of birth.</p>
+            <div class="age-box"><input type="number" id="birthYear" placeholder="YYYY" min="1900" max="2100"></div>
+            <div class="age-btn"><button onclick="checkAge()">Check Age</button></div>
         </div>
     </div>
     <script src="js/main.js"></script>
