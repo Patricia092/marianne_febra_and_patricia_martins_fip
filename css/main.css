@@ -108,7 +108,7 @@ section p {
 }
 
 .flex-container-footer-m-l-xl {
-    margin: 0px 80px 0px 80px;
+    margin: 0px 100px 0px 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -117,8 +117,7 @@ section p {
 
 .flexbox-footer-m-l-xl {
     color: #E3DDCF;
-    padding: 20px;
-    text-align: center;
+    padding-top: 20px;
     margin-top: 50px;
     text-align: left;
 }
@@ -591,7 +590,7 @@ input[type=checkbox]:checked~#overlay-button span:after {
     cursor: pointer;
 }
 
-.btn-plus i {
+.btn-heart i {
     color: #0A284B;
     font-size: 32px;
     padding: 2px 10px;
@@ -602,10 +601,16 @@ input[type=checkbox]:checked~#overlay-button span:after {
     cursor: pointer;
 }
 
+.btn-heart i:hover {
+    transform: scale(1);
+    color: #6A614A;
+    cursor: pointer;
+}
+
 /* popover */
 
 /* Style for the popover */
-.popover-container {
+/* .popover-container {
     position: relative;
     z-index: 2;
     padding: auto;
@@ -622,19 +627,19 @@ input[type=checkbox]:checked~#overlay-button span:after {
     padding: 10px;
     z-index: 3;
     display: none;
-}
+} */
 
 /* Show the popover when hovering over the .btn-plus */
-.popover-container:hover .popover {
+/* .popover-container:hover .popover {
     display: block;
-}
+} */
 
 /* Additional styling for the popover content */
-.popover-content {
+/* .popover-content {
     font-size: 14px;
     color: #333;
     padding: 10px;
-}
+} */
 
 
 /* ---End of Hero Image--- */
@@ -918,7 +923,6 @@ textarea {
 
 
 footer {
-    margin-top: 120px;
     background-color: #0A284B;
 }
 
@@ -936,43 +940,23 @@ footer {
     width: 25%;
     background-color: #E3DDCF;
     color: #0A284B;
+    font-size: 16px;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+
 }
 
 #sign-up input[type=submit]:hover {
-    background-color: #c7a379;
+    background-color: #6A614A;
 }
 
 .form-style {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.title-footer-style {
-    margin-bottom: 10px;
-    color: white;
-    font-size: 22px;
-    font-weight: lighter;
-}
-
-.nav-list-style ul li {
-    list-style-type: none;
-}
-
-.nav-list-style ul li a {
-    text-decoration: none;
-    font-size: 18px;
-    color: white;
-}
-
-.nav-list-a:hover {
-    transform: scale(1);
-    color: #c4a47e;
 }
 
 /* The Modal (background) */
@@ -1008,13 +992,13 @@ footer {
 .modal-content p {
     text-align: center;
     font-size: 22px;
-    
+
 }
 
 .age-box {
     display: flex;
     justify-content: center;
-    
+
 }
 
 .age-box input {
@@ -1024,9 +1008,9 @@ footer {
     color: #0A284B;
 }
 
-.age-box ::placeholder{
+.age-box ::placeholder {
     color: rgb(225, 225, 225);
-    
+
 }
 
 .age-btn {
@@ -1054,4 +1038,3 @@ input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
