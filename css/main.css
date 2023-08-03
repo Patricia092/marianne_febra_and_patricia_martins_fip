@@ -6,9 +6,10 @@
     3. Header
     4. Mobile Menu
     5. Hero slider
-    6. About Us
-    7. contact Us
-    8. Footer
+    6. Card Slider Home
+    7. About Us
+    8. contact Us
+    9. Footer
 
  */
 
@@ -517,16 +518,6 @@ input[type=checkbox]:checked~#overlay-button span:after {
     right: -22px;
 }
 
-.wrapper .carousel {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 3) - 12px);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 16px;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-}
 
 .carousel::-webkit-scrollbar {
     display: none;
@@ -648,6 +639,207 @@ input[type=checkbox]:checked~#overlay-button span:after {
 
 /* ---End of Hero Image--- */
 
+
+/* 6. ---Card Slider Home--- */
+
+/* card slider index */
+
+.wrapper .icon-main {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #E3DDCF;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+    z-index: 999;
+}
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel .card-shop-main {
+    scroll-snap-align: start;
+    list-style: none;
+    background: #E3DDCF;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+}
+
+
+.card-shop-main .img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.card-shop-main .img img {
+    width: 200px;
+    height: 350px;
+    margin-right: 10px;
+    z-index: 2;
+}
+
+.card-shop-main h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.card-shop-main p {
+    font-size: 12px;
+}
+
+.text-shop {
+    width: 200px;
+    margin-top: 200px;
+}
+
+.card-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper .icon-main:active {
+    transform: translateY(-50%) scale(0.85);
+}
+
+.wrapper .icon-main:first-child {
+    left: 0px;
+}
+
+.wrapper .icon-main:last-child {
+    right: 0px;
+}
+
+.carousel.dragging .card-shop-main {
+    cursor: grab;
+    user-select: none;
+}
+
+/* .zima-title {
+    color: #3d558c4a;
+    position: absolute;
+    width: 100%;
+    font-size: 3vw;
+    line-height: 1;
+    z-index: 1;
+    text-transform: uppercase;
+    transform: translate(0);
+    white-space: nowrap;
+  }
+
+  .zima-title-1 {
+    top: 6vw;
+    animation: zima 20s linear infinite running;
+  }
+
+  @keyframes zima {
+    from {
+      left: 0px;
+    }
+
+    to {
+      left: 200px;
+    }
+  }
+
+  .zima-title-2 {
+    top: 9vw;
+    animation: zima2 20s linear infinite running;
+  }
+
+  @keyframes zima2 {
+    from {
+      right: 0px;
+    }
+
+    to {
+      right: 200px;
+    }
+  } */
+
+@media screen and (max-width: 1200px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc(100% / 2);
+    }
+
+    .card-shop-main .img {
+        height: 500px;
+        object-fit: cover;
+    }
+
+    .card-shop-main .img img {
+        width: 90%;
+        height: 400px;
+        margin-right: 10px;
+        z-index: 2;
+    }
+
+    .card-shop-main h2 {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .card-shop-main p {
+        font-size: 16px;
+    }
+
+    .text-shop {
+        width: 40%;
+        margin-top: 200px;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+
+    .card-shop-main .img {
+        height: 500px;
+        object-fit: cover;
+    }
+
+    .card-shop-main .img img {
+        width: 100%;
+        height: 400px;
+        margin-right: 10px;
+        z-index: 2;
+    }
+
+    .card-shop-main h2 {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .card-shop-main p {
+        font-size: 18px;
+    }
+
+    .text-shop {
+        width: 35%;
+        margin-top: 200px;
+    }
+}
+
+/* ---End of Card Slider Home--- */
 
 /* 6. ---About Us--- */
 
@@ -811,155 +1003,3 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-/* card slider index */
-
-.wrapper {
-    width: 100%;
-    position: relative;
-}
-
-.wrapper .icon {
-    top: 50%;
-    height: 50px;
-    width: 50px;
-    cursor: pointer;
-    font-size: 1.25rem;
-    position: absolute;
-    text-align: center;
-    line-height: 50px;
-    background: #E3DDCF;
-    border-radius: 50%;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
-    transform: translateY(-50%);
-    transition: transform 0.1s linear;
-}
-
-.wrapper .icon:active {
-    transform: translateY(-50%) scale(0.85);
-}
-
-.wrapper .icon:first-child {
-    left: -22px;
-}
-
-.wrapper .icon:last-child {
-    right: -22px;
-}
-
-.wrapper .carousel {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 3) - 12px);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 16px;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-}
-
-.carousel::-webkit-scrollbar {
-    display: none;
-}
-
-.carousel.no-transition {
-    scroll-behavior: auto;
-}
-
-.carousel.dragging {
-    scroll-snap-type: none;
-    scroll-behavior: auto;
-}
-
-.carousel.dragging .card-shop-main {
-    cursor: grab;
-    user-select: none;
-}
-
-.carousel :where(.img) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.carousel .card-shop-main {
-    scroll-snap-align: start;
-    list-style: none;
-    background: #E3DDCF;
-    cursor: pointer;
-    padding-bottom: 15px;
-    flex-direction: column;
-}
-
-
-.card-shop-main .img {
-    height: 400px;
-    object-fit: cover;
-}
-
-.card-shop-main .img img {
-    width: 200px;
-    height: 350px;
-    margin-right: 10px;
-    z-index: 2;
-}
-
-.card-shop-main h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.card-shop-main p {
-    font-size: 12px;
-}
-
-.text-shop {
-    width: 200px;
-    margin-top: 200px;
-}
-
-.card-cont {
-    display: flex;
-    justify-content: center;
-}
-
-.zima-title {
-    color: #3d558c4a;
-    position: absolute;
-    width: 100%;
-    font-size: 3vw;
-    line-height: 1;
-    z-index: 1;
-    text-transform: uppercase;
-    transform: translate(0);
-    white-space: nowrap;
-}
-
-.zima-title-1 {
-    top: 6vw;
-    animation: zima 20s linear infinite running;
-}
-
-@keyframes zima {
-    from {
-        left: 0px;
-    }
-
-    to {
-        left: 200px;
-    }
-}
-
-.zima-title-2 {
-    top: 9vw;
-    animation: zima2 20s linear infinite running;
-}
-
-@keyframes zima2 {
-    from {
-        right: 0px;
-    }
-
-    to {
-        right: 200px;
-    }
-}

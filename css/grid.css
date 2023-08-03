@@ -39,13 +39,13 @@ html {
   margin-bottom: 10px;
 }
 
-.nav-bar{
+.nav-bar {
   margin-top: 15px;
-  
+
 }
 
 .nav-bar-tablet {
-  
+
   text-align: center;
   margin-top: 15px;
 }
@@ -65,6 +65,8 @@ html {
   color: #0A284B;
   font-size: 46px;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .flavors {
@@ -92,14 +94,13 @@ html {
 }
 
 .copyright {
-	padding-top: 30px;
-	padding-bottom: 30px;
-	color: #E3DDCF;
-	display: flex;
-	justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #E3DDCF;
+  display: flex;
+  justify-content: center;
   font-weight: lighter;
 }
-
 
 .full-width-grid-con {
   display: grid;
@@ -222,25 +223,26 @@ html {
     text-align: center;
     margin-top: 10px;
   }
-  
+
   #contact-text p {
     margin: 20px 0 60px 0px;
     text-align: center;
     font-size: 20px;
   }
-  
+
 
   .footer-font {
     font-size: 22px;
   }
 
   .copyright {
-   font-size: 16px;
+    font-size: 16px;
   }
 
   .variety {
     height: 380px;
   }
+
 
   .full-width-grid-con {
     display: grid;
@@ -444,7 +446,7 @@ html {
   }
 
   .video-title {
-    margin: 90px 0 20px 0;
+    margin: 20px 0 20px 0;
     font-size: 50px;
   }
 
@@ -458,7 +460,7 @@ html {
     text-align: center;
     margin-top: 50px;
   }
-  
+
   #contact-text p {
     margin: 20px 0 60px 0px;
     text-align: center;
@@ -471,11 +473,12 @@ html {
 
   .copyright {
     font-size: 18px;
-   }
+  }
 
   .recipe {
     height: 500px;
   }
+
 
   .full-width-grid-con {
     display: grid;
@@ -676,7 +679,7 @@ html {
 
 @media screen and (min-width: 1920px) {
 
-  
+
   .flavors {
     height: 300px;
   }
