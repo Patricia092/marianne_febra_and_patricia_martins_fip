@@ -918,6 +918,57 @@ textarea {
     margin-bottom: 40px;
 }
 
+.img-flavors {
+    height: 500px;
+    border: solid white 2px;
+    margin-bottom: 100px;
+}
+
+.img-flavors h2 {
+    color: #0A284B;
+    font-size: 36px;
+    margin: 20px;
+    text-align: center;
+}
+
+.flavors-title {
+    color: #0A284B;
+    font-size: 36px;
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.flavors-style {
+    background-color: white;
+    margin: 130px 0px 130px 0px;
+}
+
+.img-flav {
+    height: 300px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons-flavor {
+    margin: 20px 20% 0 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-add-flav {
+    background-color: #0A284B;
+    border: none;
+    font-size: 16px;
+    color: white;
+    padding: 11px 60px;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
 
 /* Footer */
 
@@ -1038,3 +1089,60 @@ input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
+
+/* 7. ---Modal message submited--- */
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #0A284B;
+    color: white;
+    margin: auto;
+    padding: 20px;
+    width: 70%;
+}
+
+.modal-text {
+    margin-top: 30px;
+}
+
+.modal-text h3 {
+    font-size: 32px;
+    margin: 30px 0px 20px 0px;
+    text-align: center;
+}
+
+/* The Close Button */
+
+.closeMsg {
+    position: relative;
+    top: 10px;
+    left: 95%;
+    color: #E3DDCF;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.closeMsg:hover,
+.closeMsg:focus {
+    color: #6A614A;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ---End of Modal--- */
