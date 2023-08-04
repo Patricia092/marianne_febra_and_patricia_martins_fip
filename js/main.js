@@ -84,7 +84,6 @@ const dragStart = (e) => {
 }
 
 const dragging = (e) => {
-    debugger
     if (!isDragging) return; // if isDragging is false return from here
     // Updates the scroll position of the carousel based on the cursor movement
     carousel.scrollLeft = startScrollLeft - (e.pageX - startX);

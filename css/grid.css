@@ -102,6 +102,60 @@ html {
   font-weight: lighter;
 }
 
+.title-footer-style {
+  margin-bottom: 10px;
+  padding-left: 0px;
+  color: #E3DDCF;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.nav-list-style ul li {
+  list-style-type: none;
+}
+
+.nav-list-style ul li a {
+  text-decoration: none;
+  font-size: 26px;
+  color: #E3DDCF;
+  font-family: 'Melodrama', serif;
+  text-transform: uppercase;
+}
+
+.nav-list-a:hover {
+  transform: scale(1);
+  color: #6A614A;
+}
+
+.social-media {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.social-media img {
+  margin: 1%;
+  width: 5%;
+  height: 5%;
+}
+
+.social-media-style {
+  margin: 2%;
+  text-decoration: none;
+  font-size: 5vw;
+  color: #E3DDCF;
+  font-family: 'Melodrama', serif;
+  text-transform: uppercase;
+}
+
+.social-media-style:hover {
+  transform: scale(1);
+  color: #6A614A;
+}
+
+
 .full-width-grid-con {
   display: grid;
   grid-template-columns: 1fr minmax(0, 767px) 1fr;
@@ -243,6 +297,28 @@ html {
     height: 380px;
   }
 
+  .title-footer-style {
+    margin-bottom: 10px;
+    padding-left: 0px;
+    color: #E3DDCF;
+    font-size: 16px;
+    font-weight: lighter;
+  }
+
+  .nav-list-style ul li a {
+    font-size: 28px;
+  }
+
+  .social-media img {
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .social-media-style {
+    margin: 15px;
+    font-size: 3vw;
+  }
 
   .full-width-grid-con {
     display: grid;
@@ -472,12 +548,61 @@ html {
   }
 
   .copyright {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .recipe {
     height: 500px;
   }
+
+  .title-footer-style {
+    margin-bottom: 10px;
+    padding-left: 0px;
+    color: #E3DDCF;
+    font-size: 20px;
+    font-weight: lighter;
+  }
+
+  .nav-list-style ul li {
+    list-style-type: none;
+  }
+
+  .nav-list-style ul li a {
+    text-decoration: none;
+    font-size: 28px;
+    color: #E3DDCF;
+    font-family: 'Melodrama', serif;
+    text-transform: uppercase;
+  }
+
+  .nav-list-a:hover {
+    transform: scale(1);
+    color: #6A614A;
+  }
+
+  .social-media {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .social-media img {
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .social-media-style {
+    margin: 15px;
+    text-decoration: none;
+    font-size: 34px;
+    color: #E3DDCF;
+    font-family: 'Melodrama', serif;
+    text-transform: uppercase;
+  }
+
 
 
   .full-width-grid-con {
