@@ -200,14 +200,14 @@
                     <h3 class="hidden">Contact Us Form</h3>
                     <form method="POST">
                         <label for="fname">Name*</label>
-                        <input name="fullName" type="text" id="fname" placeholder="Your full name">
+                        <input name="fullName" type="text" id="fname" required placeholder="Your full name">
                         <label for="email">Email*</label>
                         <input name="email" type="email" id="email" required placeholder="Your Email address">
                         <label for="phone">Phone*</label>
                         <input name="phone" id="phone" type="text" required placeholder="Your phone number">
                         <label for="comment">Comment*</label>
-                        <textarea name="msg" id="comment" placeholder="Your Comment"></textarea>
-                        <input name="submit" type="submit" value="SUBMIT">
+                        <textarea name="msg" id="comment" required placeholder="Your Comment"></textarea>
+                        <input name="submit" type="submit" value="SUBMIT" class="btn-submit">
                     </form>
                 </section>
             </div>
@@ -306,6 +306,19 @@
             <div class="age-btn"><button onclick="checkAge()">Check Age</button></div>
         </div>
     </div>
+    <section class="modal modalMsg">
+        <h2 class="hidden">Thank You for Your Submission!</h2>
+        <div class="modal-content">
+            <span class="closeMsg">X</span>
+            <div class="modal-text">
+                <h3>Thank You for Your Submission!</h3><br>
+                    <p>We have received your form submission. Your feedback is valuable to us, and we appreciate you taking the time to share it with us.</p>
+                    <p>If you have any further questions or concerns, please feel free to reach out to us. We'll be glad to assist you.</p>
+                    <p>Have a great day!</p>
+                </p>
+            </div>
+        </div>
+    </section>
     <script src="js/main.js"></script>
 </body>
 

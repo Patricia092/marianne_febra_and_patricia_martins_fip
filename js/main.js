@@ -115,3 +115,53 @@ carousel.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+
+
+// Modal Functionality
+
+// Function to toggle the display of the modal
+function toggleModal() {
+    const modal = document.querySelector(".modalMsg");
+    const form = document.querySelector("form");
+    modal.style.display = modal.style.display === "block" ? "none" : "block";
+
+    // Setting a delay for closing the modal 
+    if (modal.style.display === "block") {
+        setTimeout(() => {
+            closeModal();
+        }, 5000); 
+    }
+}
+
+// Function to handle form submission
+function handleFormSubmit(event) {
+    event.preventDefault(); 
+    toggleModal();
+}
+
+// Get the form element
+const form = document.querySelector("form");
+
+// Add event listener to the form submission
+form.addEventListener("submit", handleFormSubmit);
+
+// Function to close modal
+function closeModal() {
+    const modal = document.querySelector(".modalMsg");
+    modal.style.display = "none";
+    form.reset();
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    const modal = document.querySelector(".modalMsg");
+    if (event.target == modal) {
+        closeModal();
+    }
+};
+
+// When the user clicks on the close button, close the modal
+const closeButton = document.querySelector(".closeMsg");
+closeButton.onclick = function () {
+    closeModal();
+};
