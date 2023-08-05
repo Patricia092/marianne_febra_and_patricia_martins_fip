@@ -613,23 +613,23 @@ input[type=checkbox]:checked~#overlay-button span:after {
 /* popover */
 
 .popover {
-  display: none;
-  position: absolute;
-  color: #0A284B;
-  background-color: #E3DDCF;
-  padding: 10px;
-  border-radius: 4px;
-  z-index: 999;
-  font-size: 14px;
-  width: 200px;
-  text-align: left;
-  
+    display: none;
+    position: absolute;
+    color: #0A284B;
+    background-color: #E3DDCF;
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 999;
+    font-size: 14px;
+    width: 200px;
+    text-align: left;
+
 }
 
-  /* Add relative positioning to the img-flavors container */
-  .img-flavors {
+/* Add relative positioning to the img-flavors container */
+.img-flavors {
     position: relative;
-  }
+}
 
 
 
@@ -903,13 +903,35 @@ textarea {
 
 /* ---End of Contact Us--- */
 
+.img-placeholder {
+    background-color: white;
+    height: 500px;
+    margin-bottom: 130px;
+}
+
+.about-style h4 {
+    color: #0A284B;
+    margin: 30px 0 30px 0;
+    font-size: 36px;
+    padding-left: 15px;
+}
+
+.about-style p {
+    color: #0A284B;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
 
 
 .flavors-style {
     background-color: white;
     margin-top: 100px;
     margin-bottom: 100px;
-  }
+}
+
+.last-img {
+ margin-bottom: 150px;
+}
 
 /* Footer */
 
