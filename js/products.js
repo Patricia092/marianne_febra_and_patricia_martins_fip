@@ -106,54 +106,48 @@ wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 
 //popover
 
-// const popoverContent = [
-//   "Variety Pack Content",
-//   "Bundle 1 Content",
-//   "Bundle 2 Content",
-//   "Bundle 3 Content",
-//   "Bundle 4 Content",
-// ];
+const popoverContent = [
+  "Succulent blackberries intertwine with whispers of mystery, creating a delightful symphony of sweet and tart notes",
+  "Bundle 1 Content",
+  "Bundle 2 Content",
+  "Bundle 3 Content",
+];
 
-// // Function to show the popover
-// function showPopover(event) {
-//   const target = event.target;
-//   const id = target.id;
-//   if (id && id.startsWith("btn-plus-")) {
-//     // Hide any currently shown popovers for other cards
-//     const allPopovers = document.querySelectorAll(".popover");
-//     allPopovers.forEach((popover) => {
-//       popover.style.display = "none";
-//     });
+function showPopover(event) {
+  const target = event.target;
+  if (target.id && target.id.startsWith("btn-plus-")) {
+    const cardIndex = parseInt(target.id.substring("btn-plus-".length)) - 1;
+    const popover = document.getElementById(`popover-${cardIndex + 1}`);
+    
+    // Hide all other popovers
+    hideAllPopovers();
+    
+    if (popover) {
+      popover.textContent = popoverContent[cardIndex];
+      popover.style.display = "block";
 
-//     const cardIndex = parseInt(id.substring("btn-plus-".length)) - 1;
-//     const popoverContainerId = `popover-container-${cardIndex + 1}`;
-//     const popoverContainer = document.getElementById(popoverContainerId);
+      // Get the dimensions of popover, btn-plus, and img-flavors elements
+      const popoverRect = popover.getBoundingClientRect();
+      const btnPlusRect = target.getBoundingClientRect();
+      const imgFlavorsRect = target.closest('.img-flavors').getBoundingClientRect();
 
-//     if (popoverContainer) {
-//       let popover = document.getElementById(`popover-${cardIndex + 1}`);
+      // Calculate the top position to place the popover above the btn-plus relative to img-flavors
+      const topPosition = btnPlusRect.top - imgFlavorsRect.top - popoverRect.height - 10;
 
-//       // Set the popover content for the current card
-//       popover.textContent = popoverContent[cardIndex];
+      // Set the position of the popover
+      popover.style.top = `${topPosition}px`;
+      popover.style.left = `${btnPlusRect.left - imgFlavorsRect.left}px`;
+    }
+  }
+}
 
-//       // Make the popover visible
-//       popover.style.display = "block";
-//     }
-//   }
-// }
+function hideAllPopovers() {
+  const allPopovers = document.querySelectorAll(".popover");
+  allPopovers.forEach((popover) => (popover.style.display = "none"));
+}
 
-// // Get all btn-plus elements and add event listeners to each of them
-// const btnPlusElements = document.querySelectorAll(".btn-plus");
-// btnPlusElements.forEach((btnPlus) => {
-//   btnPlus.addEventListener("mouseenter", showPopover);
-// });
-
-// // Function to hide the popover when the mouse leaves the carousel container
-// function hideAllPopovers() {
-//   const allPopovers = document.querySelectorAll(".popover");
-//   allPopovers.forEach((popover) => {
-//     popover.style.display = "none";
-//   });
-// }
-
-// const carouselContainer = document.querySelector(".grid-con");
-// carouselContainer.addEventListener("mouseleave", hideAllPopovers);
+const btnPlusElements = document.querySelectorAll(".btn-plus");
+btnPlusElements.forEach((btnPlus) => {
+  btnPlus.addEventListener("mouseenter", showPopover);
+  btnPlus.addEventListener("mouseleave", hideAllPopovers);
+});
