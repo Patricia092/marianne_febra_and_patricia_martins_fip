@@ -139,8 +139,6 @@ a {
     color: inherit;
 }
 
-
-
 .itens {
     color: #E3DDCF;
     text-decoration: none;
@@ -401,15 +399,27 @@ input[type=checkbox]:checked~#overlay-button span:after {
     margin: 0 0;
 }
 
-.hero-img img {
-    width: 100%;
+
+.image-container {
+    position: relative;
 }
 
-.hero-img {
+.hero-img-about-us img {
+    width: 100%;
+    height: 100%;
+    max-height: 710px;
+    opacity: 0.5;
+}
+
+.hero-img-about-us {
     display: grid;
     grid-column: span 2;
-    margin-bottom: 2em;
+    position: relative;
+    background-color:#0A284B;
+
 }
+
+
 
 .hero-img>* {
     grid-column: 1;
@@ -485,8 +495,11 @@ input[type=checkbox]:checked~#overlay-button span:after {
 /* card slider */
 
 .wrapper {
+    margin-top: 0px;
     width: 100%;
     position: relative;
+    background-color: white;
+    padding-bottom: 7%;
 }
 
 .wrapper .icon {
@@ -649,7 +662,7 @@ input[type=checkbox]:checked~#overlay-button span:after {
     position: absolute;
     text-align: center;
     line-height: 50px;
-    background: #E3DDCF;
+    background: white;
     border-radius: 50%;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
     transform: translateY(-50%);
@@ -671,7 +684,7 @@ input[type=checkbox]:checked~#overlay-button span:after {
 .carousel .card-shop-main {
     scroll-snap-align: start;
     list-style: none;
-    background: #E3DDCF;
+    background: white;
     cursor: pointer;
     padding-bottom: 15px;
     flex-direction: column;
@@ -684,9 +697,8 @@ input[type=checkbox]:checked~#overlay-button span:after {
 }
 
 .card-shop-main .img img {
-    width: 200px;
-    height: 350px;
-    margin-right: 10px;
+    width: 230px;
+    height: 400px;
     z-index: 2;
 }
 
@@ -699,9 +711,39 @@ input[type=checkbox]:checked~#overlay-button span:after {
     font-size: 12px;
 }
 
+.btn-add-flavor {
+    background-color: #0A284B;
+    border: none;
+    font-size: 14px;
+    color: #E3DDCF;
+    padding: 11px 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.btn-add-flavor:hover{
+    background-color: #6A614A;
+    color: white;  
+    transform: scale(1);
+}
+
+.button-flavors-home {
+    margin-left: 56%;
+    display: flex;
+}
+
 .text-shop {
     width: 200px;
-    margin-top: 200px;
+    margin-top: 180px;
+    color: #0A284B;
+}
+
+.text-shop .txt-available {
+    margin-top: 15px;
+    font-size: 11px;
+    color: #6A614A;
 }
 
 .card-cont {
@@ -791,12 +833,12 @@ input[type=checkbox]:checked~#overlay-button span:after {
     }
 
     .card-shop-main p {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .text-shop {
         width: 40%;
-        margin-top: 200px;
+        margin-top: 160px;
     }
 
 
@@ -811,6 +853,11 @@ input[type=checkbox]:checked~#overlay-button span:after {
     .card-shop-main .img {
         height: 500px;
         object-fit: cover;
+    }
+
+    .text-shop {
+        width: 40%;
+        margin-top: 200px;
     }
 
     .card-shop-main .img img {
@@ -857,7 +904,7 @@ label {
 
 #contact-form {
     background-color: #E3DDCF;
-    margin-bottom: 80px;
+    margin-bottom: 120px;
 }
 
 #contact-us input,
@@ -885,13 +932,8 @@ textarea {
 }
 
 #contact-us input[type=submit]:hover {
-    background-color: #103f74;
-}
-
-.contact-text-style {
-    color: #0A284B;
-    text-align: left;
-    margin: 0;
+    background-color: #6A614A;
+    color: white;
 }
 
 .contact-us-style {
