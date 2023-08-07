@@ -117,7 +117,7 @@ carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 
 
-// Modal Functionality
+// Modal Thank you message
 
 // Function to toggle the display of the modal
 function toggleModal() {
@@ -129,7 +129,7 @@ function toggleModal() {
     if (modal.style.display === "block") {
         setTimeout(() => {
             closeModal();
-        }, 5000); 
+        }, 10000); 
     }
 }
 

@@ -108,9 +108,9 @@ wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 
 const popoverContent = [
   "Succulent blackberries intertwine with whispers of mystery, creating a delightful symphony of sweet and tart notes",
-  "Bundle 1 Content",
-  "Bundle 2 Content",
-  "Bundle 3 Content",
+  "Witness the radiant glow of a pineapple sunset, a taste that brings warmth and serenity to your palate.",
+  "Let the juicy sweetness of ripe kiwis whisk you away to sun-kissed beaches, while exotic tropical fruits add a touch of ecstasy to every sip. ",
+  "Join a luxurious garden soirée with rose-infused cider, a graceful blend that elevates your sipping experience.",
 ];
 
 function showPopover(event) {
@@ -118,10 +118,10 @@ function showPopover(event) {
   if (target.id && target.id.startsWith("btn-plus-")) {
     const cardIndex = parseInt(target.id.substring("btn-plus-".length)) - 1;
     const popover = document.getElementById(`popover-${cardIndex + 1}`);
-    
+
     // Hide all other popovers
     hideAllPopovers();
-    
+
     if (popover) {
       popover.textContent = popoverContent[cardIndex];
       popover.style.display = "block";
