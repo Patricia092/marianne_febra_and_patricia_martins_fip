@@ -286,7 +286,7 @@ a:hover i {
     position: absolute;
     right: 1em;
     padding: 38px 11px;
-    z-index: 5;
+    z-index: 999;
     cursor: pointer;
     user-select: none;
 }
@@ -353,7 +353,7 @@ input[type=checkbox]:checked~#overlay-button span:after {
     height: 100vh;
     width: 100vw;
     background: #0A284B;
-    z-index: 2;
+    z-index: 5;
     visibility: hidden;
     position: absolute;
     top: 0;
@@ -408,7 +408,7 @@ input[type=checkbox]:checked~#overlay-button span:after {
     width: 100%;
     height: 100%;
     max-height: 710px;
-    opacity: 0.5;
+
 }
 
 .hero-img-about-us {
@@ -432,15 +432,12 @@ input[type=checkbox]:checked~#overlay-button span:after {
     width: 100%;
     height: 100%;
     max-height: 700px;
-    opacity: 0.5;
 }
 
 .hero-img {
     display: grid;
     grid-column: span 2;
     position: relative;
-    background-color:#0A284B;
-
 }
 
 .mySlides {
@@ -696,7 +693,7 @@ input[type=checkbox]:checked~#overlay-button span:after {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
     transform: translateY(-50%);
     transition: transform 0.1s linear;
-    z-index: 999;
+    z-index: 2;
 }
 
 .wrapper .carousel {
@@ -932,20 +929,6 @@ textarea {
 
 
 /* ---End of Contact Us--- */
-
-
-.about-style h4 {
-    color: #0A284B;
-    margin: 30px 0 30px 0;
-    font-size: 36px;
-    padding-left: 15px;
-}
-
-.about-style p {
-    color: #0A284B;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
 
 
 .flavors-style {
